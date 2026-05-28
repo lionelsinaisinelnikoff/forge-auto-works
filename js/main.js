@@ -221,28 +221,51 @@ function initContactForm() {
   }
 }
 
-// Booking CTA - scroll to contact + highlight
+// Booking CTA - show phone number modal
 function initBookButtons() {
   const bookButtons = document.querySelectorAll('[data-book-now]');
+  const modal = document.getElementById('booking-modal');
+  const closeBtn = document.getElementById('booking-modal-close');
 
+  if (!modal) return;
+
+  function openBookingModal() {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookingModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  // Attach to all booking buttons
   bookButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        // Briefly highlight the form
-        setTimeout(() => {
-          const formCard = contactSection.querySelector('.form-card');
-          if (formCard) {
-            formCard.classList.add('ring-2', 'ring-accent');
-            setTimeout(() => {
-              formCard.classList.remove('ring-2', 'ring-accent');
-            }, 1600);
-          }
-        }, 850);
-      }
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openBookingModal();
     });
+  });
+
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeBookingModal);
+  }
+
+  // Click on backdrop to close
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeBookingModal();
+    }
+  });
+
+  // Escape key support
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('hidden') && e.key === 'Escape') {
+      closeBookingModal();
+    }
   });
 }
 

@@ -552,6 +552,32 @@
     </div>
   </div>
 
+  <!-- BOOKING / PHONE MODAL -->
+  <div id="booking-modal" class="hidden fixed inset-0 z-[110] items-center justify-center bg-black/90 p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl max-w-sm w-full p-8 text-center relative">
+      <!-- Close -->
+      <button id="booking-modal-close" 
+              class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+        <i class="fa-solid fa-times text-xl"></i>
+      </button>
+      
+      <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+        <i class="fa-solid fa-phone-volume text-accent text-3xl"></i>
+      </div>
+      
+      <h3 class="text-2xl font-semibold tracking-tight mb-2">Call to Book</h3>
+      <p class="text-zinc-400 text-sm mb-6">Speak with our service team directly</p>
+      
+      <!-- Big clickable phone number -->
+      <a href="tel:8888888888" 
+         class="block bg-white hover:bg-zinc-100 active:bg-zinc-200 transition-all text-zinc-950 font-bold text-5xl tracking-[-2px] py-7 rounded-3xl mb-3">
+        888-888-888
+      </a>
+      
+      <p class="text-xs text-emerald-400 font-medium">Tap the number above to call now</p>
+    </div>
+  </div>
+
   <!-- SUCCESS TOAST -->
   <div id="success-toast" class="hidden fixed bottom-6 right-6 z-[110] items-center gap-x-4 bg-zinc-900 border border-emerald-700 shadow-xl rounded-3xl pl-6 pr-4 py-4 max-w-sm">
     <div class="flex items-start gap-x-4">
