@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Forge Auto Works — Oakland's trusted mechanic shop for expert engine repair, brakes, diagnostics, and full-service auto maintenance. ASE certified. 15+ years experience.">
+  <title>Forge Auto Works | Expert Auto Repair in Oakland, CA</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-zinc-950 text-zinc-200 antialiased">
+  <!-- NAV -->
+  <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="px-6 py-5 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-wrench text-white text-2xl"></i>
+          </div>
+          <div>
+            <div class="font-bold text-2xl tracking-tighter">FORGE</div>
+            <div class="text-[10px] text-zinc-500 -mt-1 tracking-[3px]">AUTO WORKS</div>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+          <a href="#services" class="nav-link text-zinc-300 hover:text-white">Services</a>
+          <a href="#about" class="nav-link text-zinc-300 hover:text-white">About</a>
+          <a href="#gallery" class="nav-link text-zinc-300 hover:text-white">Gallery</a>
+          <a href="#testimonials" class="nav-link text-zinc-300 hover:text-white">Stories</a>
+          <a href="#contact" class="nav-link text-zinc-300 hover:text-white">Contact</a>
+        </div>
+
+        <!-- CTA + Mobile -->
+        <div class="flex items-center gap-x-3">
+          <button data-book-now 
+                  class="hidden sm:flex items-center gap-x-2 bg-white hover:bg-zinc-100 text-zinc-950 text-sm font-semibold px-5 h-10 rounded-2xl transition-colors">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book Service</span>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" 
+                  class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white transition-colors">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-zinc-900">
+      <div class="px-6 py-6 flex flex-col gap-y-4 text-lg font-medium">
+        <a href="#services" class="text-zinc-300 py-1">Services</a>
+        <a href="#about" class="text-zinc-300 py-1">About Us</a>
+        <a href="#gallery" class="text-zinc-300 py-1">Our Work</a>
+        <a href="#testimonials" class="text-zinc-300 py-1">Customer Stories</a>
+        <a href="#contact" class="text-zinc-300 py-1">Contact</a>
+        <button data-book-now 
+                class="mt-3 w-full flex items-center justify-center gap-x-2 bg-white text-zinc-950 font-semibold py-3 rounded-2xl">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book an Appointment</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="relative h-[100dvh] min-h-[620px] flex items-center justify-center overflow-hidden">
+    <img src="assets/images/hero.jpg" alt="Forge Auto Works modern auto repair shop exterior at golden hour" 
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1 mb-6">
+        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+        <span class="text-xs font-medium tracking-widest text-white/90">EST. 2008 • OAKLAND, CA</span>
+      </div>
+      
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-4">
+        PRECISION.<br>RELIABILITY.<br>TRUST.
+      </h1>
+      <p class="max-w-md mx-auto text-xl text-white/80 mb-10">
+        Expert mechanics. State-of-the-art diagnostics.<br class="hidden sm:block"> 
+        Honest service for every vehicle.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button data-book-now 
+                class="btn-primary inline-flex items-center justify-center gap-x-3 text-white font-semibold text-base px-8 h-14 rounded-3xl">
+          <i class="fa-solid fa-wrench"></i>
+          <span>Schedule Service</span>
+        </button>
+        <a href="#gallery" 
+           class="btn-secondary inline-flex items-center justify-center gap-x-3 border border-white/70 hover:border-white text-white font-semibold text-base px-8 h-14 rounded-3xl">
+          <span>View Our Work</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      
+      <div class="mt-12 flex justify-center">
+        <a href="#services" class="flex flex-col items-center text-white/60 hover:text-white/90 transition-colors">
+          <span class="text-xs tracking-[2px] mb-1">SCROLL TO EXPLORE</span>
+          <i class="fa-solid fa-chevron-down text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <div class="border-b border-zinc-800 bg-zinc-900/70">
+    <div class="max-w-7xl mx-auto px-6 py-5">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-5 text-center md:text-left">
+        <div class="trust-badge flex items-center justify-center md:justify-start gap-x-3">
+          <i class="fa-solid fa-shield-halved text-accent text-2xl"></i>
+          <div class="text-left">
+            <div class="font-semibold">3-Year / 36k Mile</div>
+            <div class="text-xs text-zinc-400">Nationwide Warranty</div>
+          </div>
+        </div>
+        <div class="trust-badge flex items-center justify-center md:justify-start gap-x-3">
+          <i class="fa-solid fa-certificate text-accent text-2xl"></i>
+          <div class="text-left">
+            <div class="font-semibold">ASE Certified</div>
+            <div class="text-xs text-zinc-400">Master Technicians</div>
+          </div>
+        </div>
+        <div class="trust-badge flex items-center justify-center md:justify-start gap-x-3">
+          <i class="fa-solid fa-tools text-accent text-2xl"></i>
+          <div class="text-left">
+            <div class="font-semibold">Latest Diagnostics</div>
+            <div class="text-xs text-zinc-400">Factory-level equipment</div>
+          </div>
+        </div>
+        <div class="trust-badge flex items-center justify-center md:justify-start gap-x-3">
+          <i class="fa-solid fa-users text-accent text-2xl"></i>
+          <div class="text-left">
+            <div class="font-semibold">4,800+ Vehicles</div>
+            <div class="text-xs text-zinc-400">Serviced last 5 years</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
+    <div class="flex items-end justify-between mb-9">
+      <div>
+        <div class="uppercase text-accent text-xs tracking-[3px] font-semibold">WHAT WE DO BEST</div>
+        <h2 class="text-5xl font-bold tracking-tighter">Full-Service<br>Auto Repair</h2>
+      </div>
+      <a href="#contact" class="hidden md:flex items-center gap-x-2 text-sm font-medium text-accent hover:text-accent-light">
+        REQUEST A QUOTE <i class="fa-solid fa-arrow-right ml-1"></i>
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Service 1 -->
+      <div class="service-card group bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex gap-5">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-accent text-3xl">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-xl mb-1.5 group-hover:text-accent transition-colors">Engine Diagnostics &amp; Repair</div>
+          <p class="text-sm text-zinc-400 leading-relaxed">Complete engine analysis using OEM-level scanners. From misfires to full rebuilds, we restore performance and reliability.</p>
+        </div>
+      </div>
+
+      <div class="service-card group bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex gap-5">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-accent text-3xl">
+          <i class="fa-solid fa-car-battery"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-xl mb-1.5 group-hover:text-accent transition-colors">Brakes, Rotors &amp; ABS</div>
+          <p class="text-sm text-zinc-400 leading-relaxed">Premium pads, resurfacing, and full hydraulic system service. Every job includes a 24-point safety inspection.</p>
+        </div>
+      </div>
+
+      <div class="service-card group bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex gap-5">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-accent text-3xl">
+          <i class="fa-solid fa-oil-can"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-xl mb-1.5 group-hover:text-accent transition-colors">Oil Changes &amp; Maintenance</div>
+          <p class="text-sm text-zinc-400 leading-relaxed">Synthetic, conventional, and high-mileage services. Includes multi-point inspection and fluid top-offs at every visit.</p>
+        </div>
+      </div>
+
+      <div class="service-card group bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex gap-5">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-accent text-3xl">
+          <i class="fa-solid fa-sync"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-xl mb-1.5 group-hover:text-accent transition-colors">Tires, Alignment &amp; Suspension</div>
+          <p class="text-sm text-zinc-400 leading-relaxed">Mounting, balancing, wheel alignment, shocks, struts and control arms. We keep you riding straight and smooth.</p>
+        </div>
+      </div>
+
+      <div class="service-card group bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex gap-5">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-accent text-3xl">
+          <i class="fa-solid fa-cogs"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-xl mb-1.5 group-hover:text-accent transition-colors">Transmission &amp; Drivetrain</div>
+          <p class="text-sm text-zinc-400 leading-relaxed">Automatic and manual transmission service, clutch replacement, differentials, CV axles and 4WD systems.</p>
+        </div>
+      </div>
+
+      <div class="service-card group bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex gap-5">
+        <div class="shrink-0 w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-accent text-3xl">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div>
+          <div class="font-semibold text-xl mb-1.5 group-hover:text-accent transition-colors">Electrical &amp; Diagnostics</div>
+          <p class="text-sm text-zinc-400 leading-relaxed">Battery, alternator, starter, wiring diagnostics. We troubleshoot the most complex modern vehicle electrical systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center">
+      <p class="text-sm text-zinc-400">Need something else? <a href="#contact" class="text-accent hover:underline">We handle it all</a> — A/C, cooling systems, emissions, fleet services and more.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-zinc-900 border-y border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <div class="uppercase tracking-[3px] text-xs font-semibold text-accent mb-3">ESTABLISHED 2008</div>
+          <h2 class="text-5xl font-bold tracking-tighter leading-none mb-6">Built by mechanics.<br>Trusted by drivers.</h2>
+          
+          <div class="space-y-4 text-lg text-zinc-300">
+            <p>Forge Auto Works was founded by master technician Marcus Rivera with a simple belief: every customer deserves transparent communication, honest pricing, and repairs done right the first time.</p>
+            <p>Today our team of 9 ASE-certified technicians services over 950 vehicles each month using the latest diagnostic platforms and factory-grade tooling.</p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <div class="inline-flex items-center rounded-2xl border border-zinc-700 px-5 py-2 text-sm">
+              <i class="fa-solid fa-check mr-2 text-emerald-400"></i>
+              <span>Family owned &amp; operated</span>
+            </div>
+            <div class="inline-flex items-center rounded-2xl border border-zinc-700 px-5 py-2 text-sm">
+              <i class="fa-solid fa-check mr-2 text-emerald-400"></i>
+              <span>BBB A+ Rated</span>
+            </div>
+            <div class="inline-flex items-center rounded-2xl border border-zinc-700 px-5 py-2 text-sm">
+              <i class="fa-solid fa-check mr-2 text-emerald-400"></i>
+              <span>AAA Approved</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- About image -->
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-zinc-800">
+          <img src="assets/images/team.jpg" alt="The professional team at Forge Auto Works standing proudly outside the shop" class="w-full aspect-[16/10] object-cover">
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-8">
+            <div class="text-sm text-white/70">Our team of ASE Master Technicians</div>
+            <div class="font-semibold text-2xl tracking-tight">9 specialists. Zero shortcuts.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
+    <div class="flex items-baseline justify-between mb-9">
+      <div>
+        <div class="text-accent text-xs tracking-[3px] font-semibold">REAL WORK. REAL RESULTS.</div>
+        <h2 class="text-5xl font-bold tracking-tighter">Shop Gallery</h2>
+      </div>
+      <div class="text-sm text-zinc-400 hidden md:block">Click any photo to enlarge</div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Gallery Item 1 -->
+      <div class="gallery-item group relative rounded-3xl overflow-hidden border border-zinc-800 aspect-video" data-caption="Our clean, organized shop with multiple service bays">
+        <img src="assets/images/shop-interior.jpg" alt="Bright, professional auto repair shop interior with hydraulic lifts and organized tools" class="gallery-img w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+          <div class="font-medium">State-of-the-art facility</div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 2 -->
+      <div class="gallery-item group relative rounded-3xl overflow-hidden border border-zinc-800 aspect-video" data-caption="Precision engine diagnostics and repair in progress">
+        <img src="assets/images/engine-repair.jpg" alt="Experienced mechanic performing detailed engine repair work" class="gallery-img w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+          <div class="font-medium">Engine rebuilds &amp; performance</div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 3 -->
+      <div class="gallery-item group relative rounded-3xl overflow-hidden border border-zinc-800 aspect-video" data-caption="Professional brake service and rotor resurfacing">
+        <img src="assets/images/brake-service.jpg" alt="Technician performing brake pad and rotor service on a lifted vehicle" class="gallery-img w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+          <div class="font-medium">Brake &amp; safety systems</div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="gallery-item group relative rounded-3xl overflow-hidden border border-zinc-800 aspect-video" data-caption="Advanced four-wheel alignment on modern equipment">
+        <img src="assets/images/alignment.jpg" alt="Car receiving precision wheel alignment service on laser alignment rack" class="gallery-img w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+          <div class="font-medium">Alignment &amp; handling</div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 5 -->
+      <div class="gallery-item group relative rounded-3xl overflow-hidden border border-zinc-800 aspect-video" data-caption="Satisfied customers receiving their vehicle after service">
+        <img src="assets/images/happy-customer.jpg" alt="Happy customers receiving keys from mechanic after successful repair" class="gallery-img w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+          <div class="font-medium">Customer-first experience</div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 6 -->
+      <div class="gallery-item group relative rounded-3xl overflow-hidden border border-zinc-800 aspect-video" data-caption="Dedicated team of certified automotive professionals">
+        <img src="assets/images/team.jpg" alt="Forge Auto Works expert technician team" class="gallery-img w-full h-full object-cover">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+          <div class="font-medium">Our ASE Master team</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="bg-zinc-900 border-y border-zinc-800 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <div class="text-accent text-xs tracking-[3px] font-semibold">DON'T TAKE OUR WORD FOR IT</div>
+        <h2 class="text-5xl font-bold tracking-tighter mt-2">Real stories from real drivers.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+          <div class="flex gap-1 mb-5 text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-lg leading-tight text-zinc-100">"Took my 2018 F-150 in for a check engine light. They diagnosed a bad cam phaser in under an hour, gave me options, and had it fixed the next day for less than I expected. Honest people."</p>
+          <div class="mt-8 flex items-center gap-x-4">
+            <div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center font-bold text-accent">JD</div>
+            <div>
+              <div class="font-semibold">James Delgado</div>
+              <div class="text-xs text-zinc-400">Oakland • 2024 F-150 Owner</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+          <div class="flex gap-1 mb-5 text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="text-lg leading-tight text-zinc-100">"My Prius was making a horrible grinding noise. They found a failing water pump and replaced it the same afternoon. The car has never run quieter. The transparency on pricing was refreshing."</p>
+          <div class="mt-8 flex items-center gap-x-4">
+            <div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center font-bold text-accent">AR</div>
+            <div>
+              <div class="font-semibold">Aisha Rahman</div>
+              <div class="text-xs text-zinc-400">Piedmont • 2021 Prius Prime</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+          <div class="flex gap-1 mb-5 text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-lg leading-tight text-zinc-100">"Brought our company fleet vans in for annual service. They got all five vehicles done in one day, detailed the interiors, and even caught a suspension issue before it became expensive. Highly recommend."</p>
+          <div class="mt-8 flex items-center gap-x-4">
+            <div class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center font-bold text-accent">MT</div>
+            <div>
+              <div class="font-semibold">Marcus Torres</div>
+              <div class="text-xs text-zinc-400">Bay Logistics LLC • Fleet Manager</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid lg:grid-cols-5 gap-x-16 gap-y-14">
+      <!-- Contact Info -->
+      <div class="lg:col-span-2">
+        <div class="uppercase text-accent text-xs tracking-[3px] font-semibold mb-3">LET'S GET YOUR VEHICLE BACK ON THE ROAD</div>
+        <h2 class="text-5xl font-bold tracking-tighter">Book your service today.</h2>
+        
+        <div class="mt-8 space-y-7 text-sm">
+          <div>
+            <div class="flex items-center gap-x-3 text-accent mb-2">
+              <i class="fa-solid fa-map-marker-alt w-4"></i>
+              <span class="font-semibold text-base text-white">Visit Us</span>
+            </div>
+            <div class="pl-7 text-zinc-300 leading-snug">
+              1248 Industrial Parkway<br>
+              Oakland, CA 94607
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex items-center gap-x-3 text-accent mb-2">
+              <i class="fa-solid fa-phone w-4"></i>
+              <span class="font-semibold text-base text-white">Call or Text</span>
+            </div>
+            <a href="tel:+15105550192" class="pl-7 text-xl font-medium hover:text-accent transition-colors">(510) 555-0192</a>
+          </div>
+          
+          <div>
+            <div class="flex items-center gap-x-3 text-accent mb-2">
+              <i class="fa-solid fa-envelope w-4"></i>
+              <span class="font-semibold text-base text-white">Email</span>
+            </div>
+            <a href="mailto:service@forgeautoworks.example" class="pl-7 hover:text-accent transition-colors">service@forgeautoworks.example</a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="mt-9 bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+          <div class="font-semibold mb-3 flex items-center gap-x-2">
+            <i class="fa-regular fa-clock text-accent"></i>
+            <span>SHOP HOURS</span>
+          </div>
+          <div class="text-sm space-y-px">
+            <div class="flex justify-between py-1"><span class="text-zinc-400">Monday – Friday</span> <span>7:00 AM – 6:00 PM</span></div>
+            <div class="flex justify-between py-1"><span class="text-zinc-400">Saturday</span> <span>8:00 AM – 4:00 PM</span></div>
+            <div class="flex justify-between py-1"><span class="text-zinc-400">Sunday</span> <span class="text-zinc-500">Closed</span></div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-zinc-800 text-xs text-emerald-400 flex items-center gap-x-2">
+            <i class="fa-solid fa-check-double"></i>
+            <span>Same-day service available for most repairs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="lg:col-span-3">
+        <div class="form-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 lg:p-10">
+          <h3 class="font-semibold text-2xl tracking-tight mb-2">Request an appointment</h3>
+          <p class="text-sm text-zinc-400 mb-7">Fill out the form and our service advisor will contact you within 1 hour during business hours.</p>
+          
+          <form id="contact-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-medium text-zinc-400 mb-1.5">FULL NAME</label>
+                <input type="text" name="name" required placeholder="Alex Rivera"
+                       class="form-input w-full bg-zinc-950 border border-zinc-700 focus:border-accent rounded-2xl px-5 h-12 text-sm placeholder:text-zinc-600">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-zinc-400 mb-1.5">PHONE NUMBER</label>
+                <input type="tel" name="phone" required placeholder="(510) 555-0182"
+                       class="form-input w-full bg-zinc-950 border border-zinc-700 focus:border-accent rounded-2xl px-5 h-12 text-sm placeholder:text-zinc-600">
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-medium text-zinc-400 mb-1.5">EMAIL ADDRESS</label>
+                <input type="email" name="email" required placeholder="you@example.com"
+                       class="form-input w-full bg-zinc-950 border border-zinc-700 focus:border-accent rounded-2xl px-5 h-12 text-sm placeholder:text-zinc-600">
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-zinc-400 mb-1.5">VEHICLE YEAR / MAKE / MODEL</label>
+                <input type="text" name="vehicle" required placeholder="2022 Honda Civic"
+                       class="form-input w-full bg-zinc-950 border border-zinc-700 focus:border-accent rounded-2xl px-5 h-12 text-sm placeholder:text-zinc-600">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-zinc-400 mb-1.5">WHAT'S GOING ON WITH YOUR VEHICLE?</label>
+              <textarea name="message" rows="4" required placeholder="Check engine light came on yesterday. Occasional rough idle when cold..."
+                        class="form-input w-full bg-zinc-950 border border-zinc-700 focus:border-accent rounded-3xl px-5 py-4 text-sm placeholder:text-zinc-600 resize-y"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="btn-primary w-full flex items-center justify-center gap-x-2 h-14 text-base font-semibold text-white rounded-3xl mt-2">
+              <span>SUBMIT SERVICE REQUEST</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            
+            <p class="text-center text-xs text-zinc-500 pt-1">We respect your time. No spam, ever.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="border-t border-zinc-800 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6 py-12 text-center">
+      <p class="text-3xl font-semibold tracking-tight">Ready to experience the difference?</p>
+      <button data-book-now 
+              class="mt-6 inline-flex items-center gap-x-3 bg-accent hover:bg-orange-700 transition-colors text-white font-semibold px-10 h-14 rounded-3xl text-lg">
+        Book Your Appointment Now
+      </button>
+      <div class="mt-3 text-xs text-zinc-500">Most appointments confirmed within 30 minutes</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-black border-t border-zinc-800 py-10">
+    <div class="max-w-7xl mx-auto px-6 text-sm flex flex-col md:flex-row md:items-center justify-between gap-y-3 text-zinc-500">
+      <div>
+        © <span id="current-year"></span> Forge Auto Works. All rights reserved.
+      </div>
+      <div class="flex gap-x-6">
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Warranty Info</a>
+        <a href="#" class="footer-link">Careers</a>
+      </div>
+      <div class="text-xs md:text-sm">1248 Industrial Pkwy, Oakland, CA • (510) 555-0192</div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="hidden fixed inset-0 z-[100] items-center justify-center bg-black/95 p-4 md:p-8">
+    <div class="relative max-w-6xl w-full">
+      <!-- Close -->
+      <button id="lightbox-close" 
+              class="absolute -top-2 -right-2 md:-top-4 md:-right-4 z-10 w-11 h-11 flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-full text-white transition-colors">
+        <i class="fa-solid fa-times text-xl"></i>
+      </button>
+
+      <!-- Image -->
+      <img id="lightbox-image" class="lightbox-img w-full mx-auto rounded-2xl shadow-2xl border border-zinc-800" alt="Enlarged gallery photo">
+
+      <!-- Caption -->
+      <div id="lightbox-caption" class="text-center text-sm text-zinc-400 mt-4 px-4"></div>
+
+      <!-- Navigation -->
+      <button id="lightbox-prev"
+              class="absolute top-1/2 -translate-y-1/2 -left-3 md:-left-5 w-11 h-11 flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white rounded-full transition-colors">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button id="lightbox-next"
+              class="absolute top-1/2 -translate-y-1/2 -right-3 md:-right-5 w-11 h-11 flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white rounded-full transition-colors">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST -->
+  <div id="success-toast" class="hidden fixed bottom-6 right-6 z-[110] items-center gap-x-4 bg-zinc-900 border border-emerald-700 shadow-xl rounded-3xl pl-6 pr-4 py-4 max-w-sm">
+    <div class="flex items-start gap-x-4">
+      <div class="mt-0.5">
+        <i class="fa-solid fa-check-circle text-emerald-400 text-3xl"></i>
+      </div>
+      <div class="flex-1 pt-0.5">
+        <div class="font-semibold text-emerald-400">Request received!</div>
+        <div class="text-sm text-zinc-300 leading-snug">Thank you. A service advisor will contact you within the hour to confirm your appointment.</div>
+      </div>
+      <button id="close-toast" class="text-zinc-500 hover:text-white transition-colors mt-0.5">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
