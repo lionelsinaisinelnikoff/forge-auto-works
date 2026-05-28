@@ -4,7 +4,7 @@ A modern, fully responsive static website for a fictional premium auto repair wo
 
 ![Hero](assets/images/hero.jpg)
 
-**Live demo:** https://lionelsinaisinelnikoff.github.io/forge-auto-works
+**Live demo:** https://lionelsinaisinelnikoff.github.io/forge-auto-works/
 
 ## Features
 
